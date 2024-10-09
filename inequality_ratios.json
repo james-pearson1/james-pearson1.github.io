@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": {"text": "Ratios of inequality in the UK 1977-2023", "subtitle": "Source: ONS"},
+"title": {"text": "Ratios of inequality in the UK 1977-2022", "subtitle": "Source: ONS"},
   "data": {"url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Inequailty_ratios.csv"},
   "width": 400,
   "height": 300,
