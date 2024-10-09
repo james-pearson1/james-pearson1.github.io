@@ -3,7 +3,7 @@
   "title": {"text": "Gini Coefficient in the UK 1977-2023", "subtitle": "Source: ONS"},
   "data": {"url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/GiniCoefficientUK.csv"},
 
-  "width": 500,
+  "width": 450,
   "height": 300,
   "mark": "line",
   "encoding": {
