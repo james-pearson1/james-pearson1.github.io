@@ -10,3 +10,4 @@
     "y": {"field": "Value", "type": "quantitative","title": "Ratio Value"},
     "color": {"field": "Series", "type": "nominal","title": null}
 }
+}
