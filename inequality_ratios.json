@@ -9,5 +9,4 @@
     "x": {"field": "Date", "type": "temporal", "title": null, "axis": {"grid": false}},
     "y": {"field": "Value", "type": "quantitative","title": "Ratio Value"},
     "color": {"field": "Series", "type": "nominal","title": null}
-  }
 }
