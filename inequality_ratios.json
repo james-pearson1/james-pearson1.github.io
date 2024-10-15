@@ -8,6 +8,6 @@
   "encoding": {
     "x": {"field": "Date", "type": "temporal", "title": null, "axis": {"grid": false}},
     "y": {"field": "Value", "type": "quantitative","title": "Ratio Value"},
-    "color": {"field": "Series", "type": "nominal","title": null}
+    "color": {"field": "Series", "type": "nominal", "legend":{"labelExpr": "{'Pninety':'P90/10','Seighty':'S80/20'}[datum.label]"},"title": "Ratios"}
 }
 }
