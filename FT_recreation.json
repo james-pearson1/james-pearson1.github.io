@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/FT%20Recreation%20data.csv"
+  },
+  "mark": "line",
+  "width": 575,
+  "height": 230,
+  "title": {
+    "text": "Big Tech capital spending soars",
+    "anchor": "start",
+    "fontWeight": "normal","subtitle":"Capital spending per quarter ($bn)"
+  },
+
+  "background": "#fdf1e6",
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false,"format": "Q%q %y", "title": null}
+    },
+    "y": {"field": "Value", "type": "quantitative", "title": null},
+    "color": {
+      "field": "Company",
+      "type": "nominal",
+      "legend": {
+        "orient": "top",
+        "direction": "horizontal",
+        "title": null,
+        "labelFontWeight": "lighter"
+      },
+      "scale": {
+        "domain": ["Microsoft", "Alphabet", "Amazon", "Meta"],
+        "range": ["#2c5691", "#d8688c", "#8fd9e3", "#a5bc65"]
+      }
+    }
+  }
+}
