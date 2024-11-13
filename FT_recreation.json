@@ -5,23 +5,36 @@
     "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/FT%20Recreation%20data.csv"
   },
   "mark": "line",
-  "width": 575,
-  "height": 230,
+  "width": 1108,
+  "height": 709,
   "title": {
     "text": "Big Tech capital spending soars",
     "anchor": "start",
-    "fontWeight": "normal","subtitle":"Capital spending per quarter ($bn)"
+    "fontWeight": "normal",
+    "subtitle": "Capital spending per quarter ($bn)",
+    "fontSize": 18,
+    "subtitleColor": "grey"
   },
-
+  "view": {"stroke": "transparent"},
   "background": "#fdf1e6",
   "encoding": {
     "x": {
       "field": "Date",
       "type": "temporal",
       "title": null,
-      "axis": {"grid": false,"format": "Q%q %y", "title": null}
+      "axis": {
+        "grid": false,
+        "format": "Q%q %y",
+        "title": null,
+        "labelColor": "grey"
+      }
     },
-    "y": {"field": "Value", "type": "quantitative", "title": null},
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"labelColor": "grey", "domain": false}
+    },
     "color": {
       "field": "Company",
       "type": "nominal",
@@ -29,7 +42,8 @@
         "orient": "top",
         "direction": "horizontal",
         "title": null,
-        "labelFontWeight": "lighter"
+        "labelFontWeight": "lighter",
+        "labelColor": "grey"
       },
       "scale": {
         "domain": ["Microsoft", "Alphabet", "Amazon", "Meta"],
