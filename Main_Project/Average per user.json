@@ -3,7 +3,7 @@
   "width": 400,
   "height": {"step": 16},
   "data": {
-    "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Average%20per%20user.csv"
+    "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Average%20per%20user.csv"
   },
   "title": {
     "text": "Average number of streaming service subscriptions per user per country 2023",
