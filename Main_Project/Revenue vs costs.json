@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Charts showing Gross Domestic Box Office Revenue and Average Production Cost of Films Worldwide.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Gross%20Revenue.csv"
+  },
+  "title": {
+    "text": "Gross Domestic Box Office Revenue and Production Costs",
+    "subtitle": "Comparison of Revenue and Production Costs with Regression Lines. Source: IMDB and Statista, respectively",
+    "subtitleFontStyle": "italic"
+  },
+  "hconcat": [
+    {
+      "layer": [
+        {
+          "mark": "line",
+          "encoding": {
+            "x": {"field": "Date", "type": "temporal", "title": null},
+            "y": {
+              "field": "Revenue",
+              "type": "quantitative",
+              "title": "Revenue (in thousands)"
+            }
+          }
+        },
+        {
+          "transform": [
+            {"regression": "Revenue", "on": "Date", "as": ["Date", "Revenue"]}
+          ],
+          "mark": {"type": "line", "color": "red"},
+          "encoding": {
+            "x": {"field": "Date", "type": "temporal"},
+            "y": {"field": "Revenue", "type": "quantitative"}
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Production%20costs.csv"
+      },
+      "layer": [
+        {
+          "mark": "line",
+          "encoding": {
+            "x": {"field": "Date", "type": "temporal", "title": null},
+            "y": {
+              "field": "Value",
+              "type": "quantitative",
+              "title": "Avg. Production Cost (in millions)"
+            }
+          }
+        },
+        {
+          "transform": [
+            {"regression": "Value", "on": "Date", "as": ["Date", "Value"]}
+          ],
+          "mark": {"type": "line", "color": "red"},
+          "encoding": {
+            "x": {"field": "Date", "type": "temporal"},
+            "y": {"field": "Value", "type": "quantitative"}
+          }
+        }
+      ]
+    }
+  ]
+}
