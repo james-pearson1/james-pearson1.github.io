@@ -4,19 +4,17 @@
   "data": {
     "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/TV%20Usage.csv"
   },
-  "title": {"text": "Share of Total TV Usage in the US, August 2024 (%)", "subtitle": "Source: Nielsen"},
+  "title": {
+    "text": "Share of Total TV Usage in the US, August 2024 (%)",
+    "subtitle": "Source: Nielsen"
+  },
   "transform": [
     {
       "window": [{"op": "sum", "field": "Value", "as": "TotalValue"}],
       "frame": [null, null]
     },
-    {
-      "calculate": "(datum.Value / datum.TotalValue) * 100",
-      "as": "Percentage"
-    },
-    {
-      "filter": "datum.Percentage > 5"
-    }
+    {"calculate": "(datum.Value / datum.TotalValue) * 100", "as": "Percentage"},
+    {"filter": "datum.Percentage > 5"}
   ],
   "encoding": {
     "theta": {"field": "Value", "type": "quantitative", "stack": true},
@@ -24,19 +22,25 @@
   },
   "layer": [
     {
-      "mark": {"type": "arc", "outerRadius": 80},"encoding": {
+      "mark": {"type": "arc", "outerRadius": 80},
+      "encoding": {
         "tooltip": [
           {"field": "Company", "type": "nominal", "title": "Company"},
-          {"field": "Percentage", "type": "quantitative", "title": "Percentage", "format": ".1f"}
+          {
+            "field": "Percentage",
+            "type": "quantitative",
+            "title": "Percentage",
+            "format": ".1f"
+          }
         ]
       }
     },
     {
       "mark": {"type": "text", "radius": 100, "color": "black"},
       "encoding": {
-        "text": {"field": "Company", "type": "nominal"}, "color": {"value": "black"}
+        "text": {"field": "Company", "type": "nominal"},
+        "color": {"value": "black"}
       }
-    },
-  
+    }
   ]
 }
