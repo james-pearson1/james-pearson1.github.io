@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Cum%20Revenue.csv"
+  },
+  "title": {
+    "text": "Cumulative Box Office Revenue",
+    "subtitle": "In the US per year. Source: IMDB",
+    "subtitleFontStyle": "italic"
+  },
+  "transform": [
+    {
+      "calculate": "indexof(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], datum.Month)",
+      "as": "month_order"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Month",
+      "type": "ordinal",
+      "title": null,
+      "sort": {"field": "month_order"},"axis":{"labelAngle": 45}
+    },
+    "y": {
+      "field": "Revenue",
+      "type": "quantitative",
+      "title": "Cum. Revenue (in thousands)",
+      "axis": {"grid": false}
+    },
+    "tooltip": [
+      {"field": "Month", "type": "ordinal", "title": "Month"},
+      {"field": "Year", "type": "nominal", "title": "Year"},
+      {"field": "Revenue", "type": "quantitative", "title": "Revenue"}
+    ],
+    "color": {
+      "condition": {
+        "param": "hover",
+        "field": "Year",
+        "type": "nominal",
+        "title": null
+      },
+      "value": "grey"
+    },
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2}
+  },
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "hover",
+          "value": [{"Year": ""}],
+          "select": {"type": "point", "fields": ["Year"], "on": "pointerover"}
+        }
+      ],
+      "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+    },
+    {"mark": "line"}
+  ],
+  "config": {"view": {"stroke": null}}
+}
