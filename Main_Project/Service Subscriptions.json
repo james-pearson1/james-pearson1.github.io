@@ -5,14 +5,15 @@
   },
   "title": {
     "text": "Number of Worldwide Subscriptions to Streaming Services, 2019-2024",
-    "subtitle": "Source: Statista"
+    "subtitle": "Source: Statista",
+    "subtitleFontStyle": "italic"
   },
   "width": 400,
   "height": 300,
   "layer": [
     {
       "encoding": {
-        "x": {"field": "Date", "type": "temporal"},
+        "x": {"field": "Date", "type": "temporal", "axis": {"grid": false}},
         "y": {"field": "Value", "type": "quantitative"},
         "color": {"field": "Service", "type": "nominal"}
       },
