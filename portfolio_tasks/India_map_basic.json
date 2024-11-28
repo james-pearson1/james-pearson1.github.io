@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/udit-001/india-maps-data/refs/heads/main/topojson/india.json",
+    "format": {"type": "topojson", "feature": "states"}
+  },
+  "title": "Map of India",
+  "projection": {"type": "mercator"},
+  "mark": {
+    "type": "geoshape",
+    "fill": "lightgrey",
+    "stroke": "black",
+    "strokeWidth": 0.5
+  },
+  "encoding": {
+    "tooltip": [
+      {"field": "properties.st_nm", "type": "nominal", "title": "Area"}
+    ]
+  }
+}
