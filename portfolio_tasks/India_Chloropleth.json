@@ -19,7 +19,7 @@
       "default": 0
     }
   ],
-  "title": "Map of India",
+  "title": "Chloropleth Map of India, showing GDP by states.",
   "projection": {"type": "mercator"},
   "mark": {
     "type": "geoshape",
