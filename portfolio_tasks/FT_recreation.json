@@ -33,7 +33,7 @@
       "field": "Value",
       "type": "quantitative",
       "title": null,
-      "axis": {"labelColor": "grey", "domain": false}
+      "axis": {"labelColor": "grey", "domain": false, "tickCount": 5}
     },
     "color": {
       "field": "Company",
