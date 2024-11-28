@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/udit-001/india-maps-data/refs/heads/main/topojson/india.json",
+    "format": {"type": "topojson", "feature": "states"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.st_nm",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/portfolio_tasks/Cleaned%20India%20Data.csv"
+        },
+        "key": "Country",
+        "fields": ["Value"]
+      },
+      "default": 0
+    }
+  ],
+  "title": "Map of India",
+  "projection": {"type": "mercator"},
+  "mark": {
+    "type": "geoshape",
+    "stroke": "black",
+    "strokeWidth": 0.5
+  },
+  "encoding": {
+    "tooltip": [
+      {"field": "properties.st_nm", "type": "nominal", "title": "Area"},
+      {"field": "Value", "type": "quantitative", "title": "Value"}
+    ],
+    "color": {
+      "field": "Value",
+      "type": "quantitative",
+      "scale": {"domain": [0, 30000]}
+    }
+  }
+}
