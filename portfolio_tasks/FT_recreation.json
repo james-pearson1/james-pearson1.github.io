@@ -12,8 +12,9 @@
     "anchor": "start",
     "fontWeight": "normal",
     "subtitle": "Capital spending per quarter ($bn)",
-    "fontSize": 18,
-    "subtitleColor": "grey"
+    "fontSize": 24,
+    "subtitleColor": "grey",
+    "subtitleFontSize": 18
   },
   "view": {"stroke": "transparent"},
   "background": "#fdf1e6",
@@ -26,14 +27,20 @@
         "grid": false,
         "format": "Q%q %y",
         "title": null,
-        "labelColor": "grey"
+        "labelColor": "grey",
+        "labelFontSize": 12
       }
     },
     "y": {
       "field": "Value",
       "type": "quantitative",
       "title": null,
-      "axis": {"labelColor": "grey", "domain": false, "tickCount": 5}
+      "axis": {
+        "labelColor": "grey",
+        "domain": false,
+        "tickCount": 5,
+        "labelFontSize": 14
+      }
     },
     "color": {
       "field": "Company",
@@ -43,7 +50,8 @@
         "direction": "horizontal",
         "title": null,
         "labelFontWeight": "lighter",
-        "labelColor": "grey"
+        "labelColor": "grey",
+        "labelFontSize": 16
       },
       "scale": {
         "domain": ["Microsoft", "Alphabet", "Amazon", "Meta"],
