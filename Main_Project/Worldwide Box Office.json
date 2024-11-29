@@ -1,1 +1,53 @@
-
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Sizes of Leading Film Markets Worldwide",
+    "subtitle": "By box office revenue (in billions). Source: Gower Street Analytics.",
+    "subtitleFontStyle": "italic"
+  },
+  "width": 600,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/mclass-user/mclass-user.github.io/refs/heads/main/maps/map_world.geojson",
+    "format": {"property": "features"}
+  },
+  "layer": [
+    {
+      "transform": [{"filter": "datum.properties.ISO3 != 'ATA'"}],
+      "mark": {"type": "geoshape", "fill": "lightgrey"}
+    },
+    {"mark": {"type": "geoshape", "fill": "seagreen", "strokeWidth": 0.1}},
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Worldwide%20Box%20Office.csv"
+      },
+      "projection": {"type": "naturalEarth1"},
+      "mark": {
+        "type": "circle",
+        "stroke": "rgb(0,0,0,0.2)",
+        "strokeWidth": 1,
+        "opacity": 1,
+        "color": "darkgoldenrod"
+      },
+      "encoding": {
+        "longitude": {"field": "Long", "type": "quantitative"},
+        "latitude": {"field": "Lat", "type": "quantitative"},
+        "size": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": "Price",
+          "scale": {"range": [100, 2000]},
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Box Office Revenue ($bn)"
+          }
+        ]
+      }
+    }
+  ]
+}
