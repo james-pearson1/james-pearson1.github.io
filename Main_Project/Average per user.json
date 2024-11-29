@@ -7,7 +7,7 @@
   },
   "title": {
     "text": "Average number of streaming service subscriptions per user per country 2023",
-    "subtitle": "Source: Simon-Kucher & Partners"
+    "subtitle": "Source: Simon-Kucher & Partners","subtitleFontStyle": "italic"
   },
   "encoding": {"y": {"field": "Country", "type": "nominal", "axis": null}},
   "layer": [
