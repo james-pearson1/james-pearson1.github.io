@@ -19,13 +19,13 @@
       "default": 0
     }
   ],
-  "title": "Chloropleth Map of India, showing GDP by states.",
-  "projection": {"type": "mercator"},
-  "mark": {
-    "type": "geoshape",
-    "stroke": "black",
-    "strokeWidth": 0.5
+  "title": {
+    "text": "Chloropleth Map of India, showing GDP by states.",
+    "subtitle": "Source: Ministry of Statistics and Programme Implementation.",
+    "subtitleFontStyle": "Italic"
   },
+  "projection": {"type": "mercator"},
+  "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
   "encoding": {
     "tooltip": [
       {"field": "properties.st_nm", "type": "nominal", "title": "Area"},
