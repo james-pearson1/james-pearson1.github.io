@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/portfolio_tasks/highest_grossing_films.csv"
+  },
+  "title": {
+    "text": "Top 10 Highest Grossing Films of All Time",
+    "subtitle": "Source: Wikipedia.",
+    "subtitleFontStyle": "italic"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Title",
+      "type": "nominal",
+      "axis": {"labelAngle": 45},
+      "title": "Film title"
+    },
+    "y": {
+      "field": "Worldwide gross",
+      "type": "quantitative",
+      "title": "Worldwide gross revenue"
+    },
+    "tooltip": [
+      {"field": "Title"},
+      {"field": "Worldwide gross", "title": "Worldwide gross revenue"}
+    ]
+  }
+}
