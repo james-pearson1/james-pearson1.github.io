@@ -1,3 +1,9 @@
+/* This is an example CSS file. If you include it in your portfolio, it'll provide some clean and basic styling */
+/* for your page. Feel free to experiment with the values, or copy them into a new file and use that instead. */
+
+/* These are comments in CSS. Comments don't do anything except explain your working to make code easier to understand. */
+
+
 body { /* We can style any HTML element by using its name - here we're styling the body */
   /* We want text that uses a clean sans-serif font, is usually 16px big and close to black */
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -17,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
   margin-top: 24px;
   margin-bottom: 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* We want the headings to be a little bigger than the paragraph text */
@@ -46,7 +52,7 @@ section {
 /* Links */
 /* We want the links to be a little more visible  and a different color */
 a {
-  color: #065f46;
+  color: #0000FF;
   text-decoration: none;
 }
 
