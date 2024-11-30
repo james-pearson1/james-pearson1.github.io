@@ -11,6 +11,7 @@
     "url": "https://raw.githubusercontent.com/mclass-user/mclass-user.github.io/refs/heads/main/maps/map_world.geojson",
     "format": {"property": "features"}
   },
+  "background": "lightblue",
   "layer": [
     {
       "transform": [{"filter": "datum.properties.ISO3 != 'ATA'"}],
@@ -24,10 +25,10 @@
       "projection": {"type": "naturalEarth1"},
       "mark": {
         "type": "circle",
-        "stroke": "rgb(0,0,0,0.2)",
+        "stroke": "white",
         "strokeWidth": 1,
         "opacity": 1,
-        "color": "darkgoldenrod"
+        "color": "maroon"
       },
       "encoding": {
         "longitude": {"field": "Long", "type": "quantitative"},
