@@ -1,41 +1,83 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 400,
-  "height": {"step": 16},
   "data": {
-    "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Average%20per%20user.csv"
+    "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Service%20Subscriptions.csv"
   },
   "title": {
-    "text": "Average Number of Streaming Service Subscriptions Per User",
-    "subtitle": "By country, 2023. Source: Simon-Kucher & Partners.",
+    "text": "Worldwide Streaming Service Subscriber Count",
+    "subtitle": "In millions, 2019-2024. Source: Statista.",
     "subtitleFontStyle": "italic"
   },
-  "encoding": {"y": {"field": "Country", "type": "nominal", "axis": null}},
+  "width": 400,
+  "height": 300,
   "layer": [
     {
-      "mark": {"type": "bar", "color": "salmon"},
       "encoding": {
-        "x": {
-          "field": "Value",
-          "type": "quantitative",
-          "scale": {"domain": [0, 4]},
-          "title": "No. of subscriptions "
-        },
-        "tooltip": [
-          {"field": "Country", "type": "nominal", "title": "Country"},
-          {"field": "Value", "type": "quantitative", "title": "Value"}
-        ]
-      }
+        "x": {"field": "Date", "type": "temporal", "axis": {"grid": false}},
+        "y": {"field": "Value", "type": "quantitative"},
+        "color": {"field": "Service", "type": "nominal"}
+      },
+      "layer": [
+        {"mark": "line"},
+        {
+          "params": [
+            {
+              "name": "label",
+              "select": {
+                "type": "point",
+                "encodings": ["x"],
+                "nearest": true,
+                "on": "pointerover"
+              }
+            }
+          ],
+          "mark": "point",
+          "encoding": {
+            "opacity": {
+              "condition": {"param": "label", "empty": false, "value": 1},
+              "value": 0
+            }
+          }
+        }
+      ]
     },
     {
-      "mark": {
-        "type": "text",
-        "color": "white",
-        "fontWeight": "bold",
-        "align": "left",
-        "x": 5
-      },
-      "encoding": {"text": {"field": "Country", "type": "nominal"}}
+      "transform": [{"filter": {"param": "label", "empty": false}}],
+      "layer": [
+        {
+          "mark": {"type": "rule", "color": "gray"},
+          "encoding": {
+            "x": {"type": "temporal", "field": "Date", "title": null}
+          }
+        },
+        {
+          "encoding": {
+            "text": {"type": "quantitative", "field": "Value"},
+            "x": {"type": "temporal", "field": "Date"},
+            "y": {
+              "type": "quantitative",
+              "field": "Value",
+              "title": "Subscriber Count (in millions)"
+            }
+          },
+          "layer": [
+            {
+              "mark": {
+                "type": "text",
+                "stroke": "white",
+                "strokeWidth": 2,
+                "align": "left",
+                "dx": 5,
+                "dy": -5
+              }
+            },
+            {
+              "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
+              "encoding": {"color": {"type": "nominal", "field": "Service"}}
+            }
+          ]
+        }
+      ]
     }
   ]
 }
