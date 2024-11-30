@@ -5,7 +5,7 @@
   },
   "title": {
     "text": "Cumulative Box Office Revenue",
-    "subtitle": "In the US per year. Source: IMDB",
+    "subtitle": "In the US, per year. Source: IMDB.",
     "subtitleFontStyle": "italic"
   },
   "transform": [
@@ -19,7 +19,8 @@
       "field": "Month",
       "type": "ordinal",
       "title": null,
-      "sort": {"field": "month_order"},"axis":{"labelAngle": 45}
+      "sort": {"field": "month_order"},
+      "axis": {"labelAngle": 45}
     },
     "y": {
       "field": "Revenue",
