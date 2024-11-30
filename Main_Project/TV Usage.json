@@ -5,8 +5,9 @@
     "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/TV%20Usage.csv"
   },
   "title": {
-    "text": "Share of Total TV Usage in the US, August 2024 (%)",
-    "subtitle": "Source: Nielsen"
+    "text": "Share of Total US TV Usage by Company",
+    "subtitle": "By %, August 2024. Source: Nielsen.",
+    "subtitleFontStyle": "italic"
   },
   "transform": [
     {
@@ -18,7 +19,7 @@
   ],
   "encoding": {
     "theta": {"field": "Value", "type": "quantitative", "stack": true},
-    "color": {"field": "Company", "type": "nominal"}
+    "color": {"field": "Company", "type": "nominal", "legend": null}
   },
   "layer": [
     {
