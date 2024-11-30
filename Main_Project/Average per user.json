@@ -6,13 +6,14 @@
     "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Average%20per%20user.csv"
   },
   "title": {
-    "text": "Average number of streaming service subscriptions per user per country 2023",
-    "subtitle": "Source: Simon-Kucher & Partners","subtitleFontStyle": "italic"
+    "text": "Average Number of Streaming Service Subscriptions Per User",
+    "subtitle": "By country, 2023. Source: Simon-Kucher & Partners.",
+    "subtitleFontStyle": "italic"
   },
   "encoding": {"y": {"field": "Country", "type": "nominal", "axis": null}},
   "layer": [
     {
-      "mark": {"type": "bar", "color": "#0868f7"},
+      "mark": {"type": "bar", "color": "salmon"},
       "encoding": {
         "x": {
           "field": "Value",
