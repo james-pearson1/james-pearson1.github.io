@@ -92,7 +92,56 @@ Streaming services are now a massive aspect of entertainment, but what does this
            <p>
 Much of the data I accessed was already in the form of a downloadable excel spreadsheet, however there were two cases in which I used pandas to scrape a website. The tables on these sites that I scraped were friendly to scraping and weren’t too difficult to replicate into excel.<br /><br />Another problem I faced was missing values in some of my charts. For example, with international data, some countries simply didn’t have a record of relevant data, or the data they had was unreliable or an estimate. In these cases, I removed them from the dataset entirely to keep the data as true as possible. <br /><br />In one set of charts that was designed to show growth over time, monthly fluctuations in value made it hard to see a pattern with the naked eye. To combat this, I added regression lines for clarity.
            </p>
+           <h3>My Conclusions:</h3>
+           <p>
+              Due to limited data on international box offices, I focused on one economy as a representative example:
+           </p>
+        </div>
+      <figure id="Location4"></figure> 
+    </section>
+   <script>
+        
+        let figure_4_spec = "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Worldwide%20Box%20Office.json"; 
+
+        vegaEmbed('#Location4', figure_4_spec) 
+
+    </script>
+   <section>
+        <div class="chart-description">
+            <p> 
+              As seen, the US boasts the largest box office in the world, so I continued with that. To assess whether SVODs have affected the cinema industry, I analysed US box office revenues since 2019, when (excluding Netflix) streaming services first began to gain a noticeable foothold:
+            </p>
+        </div>
+        <figure id="Location5"></figure> 
+    </section>
+    <script>
+        
+        let figure_5_spec = "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Cum%20Revenue.json"; 
+
+        vegaEmbed('#Location5', figure_5_spec) 
+
+    </script>
+   <section>
+        <div class="chart-description">
+            <p> 
+              As shown, revenues have declined in recent years. Whilst 2020-21 have the obvious factor of the pandemic as the leading cause of low revenues in cinemas, other years lack that justification. In 2024, the industry is falling short of 2023’s low numbers, which already remain below pre-Covid levels.<br /><br />I wanted to see if this downtrend could be due to a lack of investment instead, so I examined the production costs:
+            </p>
+        </div>
+        <figure id="Location6"></figure> 
+    </section>
+   <script>
+        
+        let figure_6_spec = "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Revenue%20vs%20costs.json"; 
+
+        vegaEmbed('#Location6', figure_6_spec) 
+
+    </script>
+   <section>
+        <div class="chart-description">
+            <p> 
+Unfortunately, the money being put into film production is constantly increasing. As demonstrated by the regression lines, the cost of producing these films is growing at a rate higher than that of the revenues. If things carry on as they are, then the worries people have about the film industry are not paranoia. In short, the rise of streaming services has ultimately impacted the film industry negatively by taking away consumer’s desires to go to the cinema to watch their favourite films.            </p>
         </div>
     </section>
+   
 
 
