@@ -1,13 +1,13 @@
 /* General body styling */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 18px; /* Increased font size */
+  font-size: 18px; /* Slightly larger base font */
   color: #333;
-  line-height: 1.8; /* Slightly more spaced lines for readability */
+  line-height: 1.8; /* Spaced lines for readability */
   background-color: #F0FFFF;
   margin: 0 auto;
-  max-width: 800px;
-  padding-top: 60px;
+  max-width: 1200px; /* Increased maximum width for better coverage */
+  padding: 0 20px; /* Added padding to avoid text touching the edges */
   text-align: center; /* Centers all text within the body */
 }
 
@@ -34,14 +34,14 @@ h2 {
 
 /* Paragraph */
 p {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em; /* Increased spacing between paragraphs */
   font-weight: 300;
   text-align: center; /* Centers paragraph text */
 }
 
 /* Section spacing */
 section {
-  margin-bottom: 2.5em; /* We want a little more space between sections */
+  margin-bottom: 3em; /* Increased space between sections */
 }
 
 /* Links */
