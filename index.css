@@ -20,6 +20,18 @@ body {
   margin: 0; /* Removes any default margin */
   box-sizing: border-box; /* Includes padding in the width calculation */
 }
+.banner::after {
+  content: ""; /* Creates a decorative line */
+  display: block; /* Makes the line act like a block element */
+  width: 50%; /* Adjust the line width as needed */
+  height: 4px; /* Line thickness */
+  background-color: #FFFFFF; /* Line color */
+  margin: 10px auto 0; /* Centers the line and adds spacing */
+  position: absolute; /* Positions the line relative to the banner */
+  bottom: 0; /* Places the line at the bottom of the banner */
+  left: 50%; /* Centers the line horizontally */
+  transform: translateX(-50%); /* Adjusts for the element's width */
+}
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: #333;
