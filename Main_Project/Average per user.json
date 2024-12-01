@@ -1,73 +1,41 @@
-/* General body styling */
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 18px; /* Slightly larger base font */
-  color: #333;
-  line-height: 1.8; /* Spaced lines for readability */
-  background-color: #F0FFFF;
-  margin: 0 auto;
-  max-width: 1200px; /* Increased maximum width for better coverage */
-  padding: 0 20px; /* Added padding to avoid text touching the edges */
-  text-align: center; /* Centers all text within the body */
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: #333;
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
-  text-align: center; /* Centers headings */
-}
-
-.big {
-  font-size: 2.8em; /* Slightly larger font size for emphasis */
-}
-
-h2 {
-  font-size: 2em; /* Increased font size for subheadings */
-}
-
-.small {
-  font-size: 1.5em; /* Increased font size for smaller headings */
-}
-
-/* Paragraph */
-p {
-  margin-bottom: 1.5em; /* Increased spacing between paragraphs */
-  font-weight: 300;
-  text-align: center; /* Centers paragraph text */
-}
-
-/* Section spacing */
-section {
-  margin-bottom: 3em; /* Increased space between sections */
-}
-
-/* Links */
-a {
-  color: #0000FF;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block; /* Ensures images behave like block elements */
-  margin: 0 auto; /* Centers the image */
-}
-
-/* Vega-embedded charts */
-.vega-embed {
-  display: flex;
-  justify-content: center; /* Centers the charts horizontally */
-  align-items: center; /* Centers the charts vertically (if needed within a container) */
-  font-size: 1.2em; /* Increases the default font size for Vega content */
-  margin: 0 auto; /* Ensures charts align with other centered elements */
-  text-align: center; /* Aligns any associated text */
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": {"step": 16},
+  "data": {
+    "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Average%20per%20user.csv"
+  },
+  "title": {
+    "text": "Average Number of Streaming Service Subscriptions Per User",
+    "subtitle": "By country, 2023. Source: Simon-Kucher & Partners.",
+    "subtitleFontStyle": "italic"
+  },
+  "encoding": {"y": {"field": "Country", "type": "nominal", "axis": null}},
+  "layer": [
+    {
+      "mark": {"type": "bar", "color": "salmon"},
+      "encoding": {
+        "x": {
+          "field": "Value",
+          "type": "quantitative",
+          "scale": {"domain": [0, 4]},
+          "title": "No. of subscriptions "
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "Value", "type": "quantitative", "title": "Value"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "white",
+        "fontWeight": "bold",
+        "align": "left",
+        "x": 5
+      },
+      "encoding": {"text": {"field": "Country", "type": "nominal"}}
+    }
+  ]
 }
