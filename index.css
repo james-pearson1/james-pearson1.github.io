@@ -11,11 +11,15 @@ body {
   text-align: center; /* Centers all text within the body */
 }
 .banner {
-  background-color: #89CFF0; /* Change this to your desired banner color */
+  background-color: #ADD8E6; /* Change this to your desired banner color */
   padding: 20px 0; /* Adds vertical space around the title */
   text-align: center; /* Centers the title text */
+  width: 100%; /* Ensures the banner spans the full width */
+  position: relative; /* Ensures the banner stays in position */
+  left: 0; /* Aligns the banner to the left edge */
+  margin: 0; /* Removes any default margin */
+  box-sizing: border-box; /* Includes padding in the width calculation */
 }
-
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: #333;
