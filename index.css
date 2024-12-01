@@ -10,6 +10,11 @@ body {
   padding: 0 20px; /* Added padding to avoid text touching the edges */
   text-align: center; /* Centers all text within the body */
 }
+.banner {
+  background-color: #89CFF0; /* Change this to your desired banner color */
+  padding: 20px 0; /* Adds vertical space around the title */
+  text-align: center; /* Centers the title text */
+}
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
