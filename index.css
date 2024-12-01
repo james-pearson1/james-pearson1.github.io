@@ -21,15 +21,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .big {
-  font-size: 2.8em; /* Slightly larger font size for emphasis */
+  font-size: 2.4em; /* Slightly larger font size for emphasis */
 }
 
 h2 {
-  font-size: 2em; /* Increased font size for subheadings */
+  font-size: 1.6em; /* Increased font size for subheadings */
 }
 
 .small {
-  font-size: 1.5em; /* Increased font size for smaller headings */
+  font-size: 1.3em; /* Increased font size for smaller headings */
 }
 
 /* Paragraph */
