@@ -1,12 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Cum%20Revenue.csv"
   },
   "title": {
     "text": "Cumulative Box Office Revenue",
     "subtitle": "In the US, per year. Source: IMDB.",
-    "subtitleFontStyle": "italic"
+    "subtitleFontStyle": "italic",
+    "fontSize": 20,
+    "subtitleFontSize": 15
   },
   "transform": [
     {
@@ -20,13 +24,13 @@
       "type": "ordinal",
       "title": null,
       "sort": {"field": "month_order"},
-      "axis": {"labelAngle": 45}
+      "axis": {"labelAngle": 45, "labelFontSize": 15}
     },
     "y": {
       "field": "Revenue",
       "type": "quantitative",
       "title": "Cum. Revenue (in thousands)",
-      "axis": {"grid": false}
+      "axis": {"grid": false, "labelFontSize": 15, "titleFontSize": 15}
     },
     "tooltip": [
       {"field": "Month", "type": "ordinal", "title": "Month"},
@@ -38,7 +42,8 @@
         "param": "hover",
         "field": "Year",
         "type": "nominal",
-        "title": null
+        "title": null,
+        "legend": {"labelFontSize": 15}
       },
       "value": "grey"
     },
