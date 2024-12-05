@@ -38,7 +38,7 @@
         "type": "text",
         "color": "white",
         "fontWeight": "bold",
-        "fontSize": 15
+        "fontSize": 15,
         "align": "left",
         "x": 5
       },
