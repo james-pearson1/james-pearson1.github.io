@@ -5,8 +5,8 @@
     "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/portfolio_tasks/FT%20Recreation%20data.csv"
   },
   "mark": "line",
-  "width": 700,
-  "height": 300,
+  "width": 800,
+  "height": 400,
   "title": {
     "text": "Big Tech capital spending soars",
     "anchor": "start",
@@ -14,7 +14,7 @@
     "subtitle": "Capital spending per quarter ($bn)",
     "fontSize": 24,
     "subtitleColor": "grey",
-    "subtitleFontSize": 18
+    "subtitleFontSize": 20
   },
   "view": {"stroke": "transparent"},
   "background": "#fdf1e6",
@@ -28,7 +28,7 @@
         "format": "Q%q %y",
         "title": null,
         "labelColor": "grey",
-        "labelFontSize": 12
+        "labelFontSize": 20
       }
     },
     "y": {
@@ -39,7 +39,7 @@
         "labelColor": "grey",
         "domain": false,
         "tickCount": 5,
-        "labelFontSize": 14
+        "labelFontSize": 20
       }
     },
     "color": {
