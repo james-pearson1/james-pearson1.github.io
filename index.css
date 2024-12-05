@@ -18,7 +18,7 @@ body {
   text-align: center; /*Ensures the text is central on the screen*/
   width: 2000px; /*Ensures the banner fills the length of the screen*/
   position: relative; /*Keeps the banner in position*/
-  margin: 0; /*Clears any old margins*/
+  margin: 0 auto; /*Centres the banner*/
 }
 
 /*Adding a dividing line after the banner*/
