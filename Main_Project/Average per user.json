@@ -1,14 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 400,
-  "height": {"step": 16},
+  "width": 800,
+  "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Average%20per%20user.csv"
   },
   "title": {
     "text": "Average Number of Streaming Service Subscriptions Per User",
     "subtitle": "By country, 2023. Source: Simon-Kucher & Partners.",
-    "subtitleFontStyle": "italic"
+    "subtitleFontStyle": "italic",
+    "fontSize": 20,
+    "subtitleFontSize": 15
   },
   "encoding": {"y": {"field": "Country", "type": "nominal", "axis": null}},
   "layer": [
@@ -19,7 +21,11 @@
           "field": "Value",
           "type": "quantitative",
           "scale": {"domain": [0, 4]},
-          "title": "No. of subscriptions "
+          "axis": {
+            "title": "No. of Subscriptions",
+            "labelFontSize": 15,
+            "titleFontSize": 15
+          }
         },
         "tooltip": [
           {"field": "Country", "type": "nominal", "title": "Country"},
