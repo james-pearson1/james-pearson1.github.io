@@ -80,9 +80,9 @@ a:hover {
 .button-container {
   display: flex;
   justify-content: center;
-  width: 100%; /* Ensure the container spans the full width */
-  text-align: center; /* Fallback alignment */
-  gap: 10px;
+  width: 100%; 
+  text-align: center;
+  gap: 20px;
 }
 
 .button {
