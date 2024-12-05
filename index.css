@@ -13,14 +13,14 @@ body {
 
 /*Personalising the banner*/
 .banner {
-  background-color: #ADD8E6; /* Changed the colour of the banner */
-  padding: 20px 0; /* Padding around the title */
-  text-align: center; /* Ensures the text is central on the screen */ 
+  background-color: #ADD8E6; /*Changed the colour of the banner*/
+  padding: 20px 0; /*Padding around the title*/
+  text-align: center; /*Ensures the text is central on the screen*/ 
   max-width: 100%;
   width: 100%; 
-  position: relative; /* Keeps the banner in position */
-  margin: 0 auto; /* Centers the banner */
-  box-sizing: border-box; /* Includes padding in width calculations */
+  position: relative; /*Keeps the banner in position*/
+  margin: 0 auto; /*Centers the banner*/
+  box-sizing: border-box;
 }
 
 /*Adding a dividing line after the banner*/
@@ -79,10 +79,10 @@ a:hover {
 
 .button-container {
   display: flex;
-  justify-content: center;
+  justify-content: center; /*Centres the buttons*/
   width: 100%; 
   text-align: center;
-  gap: 20px;
+  gap: 20px; /*Creates some space between the buttons*/
 }
 
 .button {
@@ -90,8 +90,8 @@ a:hover {
   justify-content: center;
   align-items: center;
   width: 30%;
-  height: 60px;
-  background-color: #F0FFFF;
+  height: 60px; /*Sets the size of the buttons*/
+  background-color: #F0FFFF; /*Changed colour of the background*/
   color: black;
   font-size: 1.2em;
   border-radius: 10px;
