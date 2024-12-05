@@ -3,9 +3,10 @@
   "title": {
     "text": "Sizes of Leading Film Markets Worldwide",
     "subtitle": "By box office revenue (in billions). Source: Gower Street Analytics.",
-    "subtitleFontStyle": "italic"
+    "subtitleFontStyle": "italic","fontSize": 20,
+    "subtitleFontSize": 15
   },
-  "width": 600,
+  "width": 800,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/mclass-user/mclass-user.github.io/refs/heads/main/maps/map_world.geojson",
@@ -37,7 +38,7 @@
           "field": "Value",
           "type": "quantitative",
           "title": "Price",
-          "scale": {"range": [100, 2000]},
+          "scale": {"range": [100, 4000]},
           "legend": null
         },
         "tooltip": [
