@@ -77,6 +77,13 @@ a:hover {
   text-decoration: underline;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Ensure the container spans the full width */
+  text-align: center; /* Fallback alignment */
+}
+
 .button {
   display: flex;
   justify-content: center;
