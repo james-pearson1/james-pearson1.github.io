@@ -26,8 +26,9 @@ body {
 /*Adding a dividing line after the banner*/
 .banner::after {
   content: ""; /*Makes the line*/
-  display: block; /*Makes the line act as a block element */
-  width: 2000px; /*Esnures the line is the full width of the screen*/
+  display: block;/*Makes the line act as a block element */
+  max-width: 100%;
+  width: 90%; /*Esnures the line is the full width of the screen*/
   height: 6px; /*Set the thickness of the line*/
   background-color: #00008B; /*Set the colour of the line*/
   position: absolute; /*Puts the line at the bottom of the banner*/
