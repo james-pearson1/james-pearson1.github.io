@@ -6,16 +6,35 @@
   "title": {
     "text": "Worldwide Streaming Service Subscriber Count",
     "subtitle": "In millions, 2019-2024. Source: Statista.",
-    "subtitleFontStyle": "italic"
+    "subtitleFontStyle": "italic",
+    "fontSize": 20,
+    "subtitleFontSize": 15
   },
-  "width": 400,
-  "height": 300,
+  "width": 800,
+  "height": 400,
   "layer": [
     {
       "encoding": {
-        "x": {"field": "Date", "type": "temporal", "axis": {"grid": false}},
-        "y": {"field": "Value", "type": "quantitative"},
-        "color": {"field": "Service", "type": "nominal"}
+        "x": {
+          "field": "Date",
+          "type": "temporal",
+          "axis": {
+            "grid": false,
+            "labelFontSize": 15,
+            "titleFontSize": 15,
+            "tickCount": 6
+          }
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "axis": {"labelFontSize": 15, "titleFontSize": 15}
+        },
+        "color": {
+          "field": "Service",
+          "type": "nominal",
+          "legend": {"labelFontSize": 15, "titleFontSize": 15}
+        }
       },
       "layer": [
         {"mark": "line"},
