@@ -31,40 +31,40 @@ body {
   position: absolute; /*Puts the line at the bottom of the banner*/
   bottom: 0;
 }
-/* Headings */
+/*Personalising the headings*/
 h1, h2, h3, h4, h5, h6 {
   color: #333;
   margin-top: 24px;
   margin-bottom: 16px;
   font-weight: 600;
-  text-align: center; /* Centers headings */
+  text-align: center; /*Ensures the headings are central*/
 }
 
 .big {
-  font-size: 2.3em; /* Slightly larger font size for emphasis */
+  font-size: 2.3em;
 }
 
 h2 {
-  font-size: 1.6em; /* Increased font size for subheadings */
+  font-size: 1.6em;
 }
 
 .small {
-  font-size: 1.3em; /* Increased font size for smaller headings */
+  font-size: 1.3em;
 }
 
-/* Paragraph */
+/*Personalising the paragraphs*/
 p {
-  margin-bottom: 1.5em; /* Increased spacing between paragraphs */
+  margin-bottom: 1.5em; /*I increased space between paragraphs*/
   font-weight: 300;
-  text-align: center; /* Centers paragraph text */
+  text-align: center; /*Puts the paragraphs central*/
 }
 
-/* Section spacing */
+/*Increased the space between sections*/
 section {
-  margin-bottom: 3em; /* Increased space between sections */
+  margin-bottom: 3em;
 }
 
-/* Links */
+/*Personalising the links*/
 a {
   color: #0000FF;
   text-decoration: none;
@@ -74,20 +74,19 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Images */
+/*Changing the images*/
 img {
   max-width: 100%;
   height: auto;
-  display: block; /* Ensures images behave like block elements */
-  margin: 0 auto; /* Centers the image */
+  display: block; /*Makes the images act as block elements*/
+  margin: 0 auto; /*Centers the image*/
 }
 
-/* Vega-embedded charts */
+/*Changing the vega charts*/
 .vega-embed {
   display: block;
-  justify-content: center; /* Centers the charts horizontally */
-  align-items: center; /* Centers the charts vertically (if needed within a container) */
-  font-size: 1.2em; /* Increases the default font size for Vega content */
-  margin: 0 auto; /* Ensures charts align with other centered elements */
-  text-align: center; /* Aligns any associated text */
+  justify-content: center; /*Ensuring the chart is central*/
+  font-size: 1.2em;
+  margin: 0 auto;
+  text-align: center; /*Aligns text with the charts*/
 }
