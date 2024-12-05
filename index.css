@@ -16,7 +16,8 @@ body {
   background-color: #ADD8E6; /*Changed the colour of the banner*/
   padding: 20px 0; /*Padding around the title*/
   text-align: center; /*Ensures the text is central on the screen*/
-  width: 2000px; /*Ensures the banner fills the length of the screen*/
+  max-width: 100%;
+  width: 100%;/*Ensures the banner fills the length of the screen*/
   position: relative; /*Keeps the banner in position*/
   margin: 0 auto; /*Centres the banner*/
 }
