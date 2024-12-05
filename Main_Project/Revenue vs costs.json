@@ -15,7 +15,7 @@
   "hconcat": [
     {
       "width": 400,
-      "height": 300,
+      "height": 400,
       "layer": [
         {
           "mark": "line",
@@ -48,7 +48,7 @@
     },
     {
       "width": 400,
-      "height": 300,
+      "height": 400,
       "data": {
         "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/Main_Project/Production%20costs.csv"
       },
