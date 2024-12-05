@@ -16,7 +16,7 @@ body {
   background-color: #ADD8E6; /*Changed the colour of the banner*/
   padding: 20px 0; /*Padding around the title*/
   text-align: center; /*Ensures the text is central on the screen*/
-  width: 100%; /*Ensures the banner fills the length of the screen*/
+  width: 2000px; /*Ensures the banner fills the length of the screen*/
   position: relative; /*Keeps the banner in position*/
   margin: 0; /*Clears any old margins*/
 }
@@ -25,7 +25,7 @@ body {
 .banner::after {
   content: ""; /*Makes the line*/
   display: block; /*Makes the line act as a block element */
-  width: 100%; /*Esnures the line is the full width of the screen*/
+  width: 2000px; /*Esnures the line is the full width of the screen*/
   height: 6px; /*Set the thickness of the line*/
   background-color: #00008B; /*Set the colour of the line*/
   position: absolute; /*Puts the line at the bottom of the banner*/
