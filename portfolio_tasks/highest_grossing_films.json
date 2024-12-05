@@ -1,5 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/james-pearson1/james-pearson1.github.io/refs/heads/main/portfolio_tasks/highest_grossing_films.csv"
   },
