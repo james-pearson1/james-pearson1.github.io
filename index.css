@@ -85,7 +85,7 @@ img {
 
 /* Vega-embedded charts */
 .vega-embed {
-  display: flex;
+  display: block;
   justify-content: center; /* Centers the charts horizontally */
   align-items: center; /* Centers the charts vertically (if needed within a container) */
   font-size: 1.2em; /* Increases the default font size for Vega content */
