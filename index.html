@@ -1,13 +1,37 @@
+<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
+<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
+<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
+<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
+
+<!-- Take a look around and make your own copy to adapt for your own use. -->
+
+<!-- This is a comment -->
+<!-- Comments are not displayed in the browser -->
+<!-- They can be used to leave notes in the code -->
+
 <!DOCTYPE html>
 <html> 
-
+  <!-- HTML is heirarchial: tags like this define elements on the page. 
+    Each tag does something different. For example:
+        - The <html> tag defines the whole document.
+        - The <h1> tag defines a large heading
+        - The <p> tag defines a paragraph
+        - Tags appear as an opening <div> and closing </div> pair
+    -->
 <head>    
-   
+   <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
+
+
+    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
+    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
+
     <link rel="stylesheet" type="text/css" href="index.css">
-    <title>James Pearson Data Science Project</title>
+    <title>James Pearson Data Science Project</title><!-- The title displayed in the browser tab, not on the page itself -->
+   
+    <!-- This is a link to the vega-lite which we're using to make graphs -->
     
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>  <!--Bringing in -->
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
     <style>
@@ -18,14 +42,16 @@
 </head>
 
 <body> 
+   <!-- The body tag contains the elements that visitors to our page will see. -->
 <div class="banner">
-    <h1 class="big" style="margin-bottom: 0px;"> 
+    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
+        <!-- This is a header, it is the largest text on the page -->
         Practical Data Science - Portfolio Tasks
     </h1>
-    <h3 class="small"> 
+    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
         James Pearson 
     </h3>
-   <div class="button-container">
+   <div class="button-container"> <!-- I've added a container with some buttons in to replace the old links to my main proect and github -->
             <div class="button" onclick="window.location='https://github.com/james-pearson1'">
                 <span>My Github</span>
             </div>
@@ -34,13 +60,14 @@
             </div>
    </div>
 </div>
+   <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
     <section>
         <div class="chart-description">
             <h2>CC1 - Hosting:</h2>
         </div>
-        <figure id="Location1"></figure> 
+        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed, which we do throughout the rest of the code multiple times -->
     </section>
-
+ <!-- This is a script, it's a way to run JavaScript code on the page. In here we create a pathway to the raw code for our charts, which we then imbed into the location we created earlier, which we do multiple times throughout the rest of the code -->
     <script>
         
         let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; 
@@ -48,6 +75,7 @@
         vegaEmbed('#Location1', figure_1_spec) 
 
     </script>
+   <!-- Repeat this process for all other charts in the portfolio tasks -->
     <section>
         <figure id="Location2"></figure> 
     </section>
@@ -106,10 +134,11 @@
   <p>
      Despite fluctuations and even decreases in the last few years, all indicators point to inequality increasing over the last 50 years, supporting the above argument
   </p>
+   
    <section>
         <div class="chart-description">
             <h2>CC4 - Replication:</h2>
-           <img src="portfolio_tasks/Financial Times graph.png" alt="Financial Times chart">
+           <img src="portfolio_tasks/Financial Times graph.png" alt="Financial Times chart"> <!-- Adding in an image by creating a pathway to the file in the repository  -->
         </div>
     </section>
    <p>
@@ -136,6 +165,7 @@
         vegaEmbed('#Location8', figure_8_spec)
     </script>
    <section>
+      <!-- Adding a description of the chart with a link attached to the google colab page -->
 <p>I chose to scrape from Wikipedia because it is a scraper friendly website. This is due to its consistent HTML structure. </a><a href="https://colab.research.google.com/drive/1IjZ69QMIfqEpRWv1tSXJ4D0Jy2cEAraa#scrollTo=p0Uz7HYVgITd"> Link to google colab page </a></p>
     </section>
    <section>
