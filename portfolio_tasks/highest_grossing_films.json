@@ -8,20 +8,23 @@
   "title": {
     "text": "Top 10 Highest Grossing Films of All Time",
     "subtitle": "Source: Wikipedia.",
-    "subtitleFontStyle": "italic"
+    "subtitleFontStyle": "italic",
+    "fontSize": 20,
+    "subtitleFontSize": 15
   },
   "mark": "bar",
   "encoding": {
     "x": {
       "field": "Title",
       "type": "nominal",
-      "axis": {"labelAngle": 45},
+      "axis": {"labelAngle": 45, "labelFontSize": 15, "titleFontSize": 15},
       "title": "Film title"
     },
     "y": {
       "field": "Worldwide gross",
       "type": "quantitative",
-      "title": "Worldwide gross revenue"
+      "title": "Worldwide gross revenue",
+      "axis": {"titleFontSize": 15, "labelFontSize": 15}
     },
     "tooltip": [
       {"field": "Title"},
